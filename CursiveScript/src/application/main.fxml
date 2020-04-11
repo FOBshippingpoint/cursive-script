@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <top>
+      <FlowPane>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+         <children>
+            <GridPane alignment="CENTER" hgap="5.0" nodeOrientation="LEFT_TO_RIGHT">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="425.0" minWidth="10.0" prefWidth="384.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane prefHeight="30.0" prefWidth="66.0" GridPane.rowIndex="1">
+                     <children>
+                        <ComboBox fx:id="sizeCombo" maxHeight="30.0" maxWidth="30.0" minWidth="-Infinity" onAction="#changeSizeCombo" prefHeight="30.0" prefWidth="30.0" StackPane.alignment="CENTER_RIGHT">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </ComboBox>
+                        <TextField fx:id="sizeTextField" alignment="CENTER_RIGHT" onAction="#changeSizeText" prefHeight="30.0" prefWidth="70.0" promptText="px">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets right="30.0" />
+                           </StackPane.margin>
+                        </TextField>
+                     </children>
+                  </StackPane>
+                  <Label text="字體大小" />
+                  <Label layoutX="10.0" layoutY="12.0" text="草書" GridPane.columnIndex="1" />
+                  <CheckBox fx:id="sousyoCheck" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#changeSousyo" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin></CheckBox>
+               </children>
+            </GridPane>
+         </children>
+      </FlowPane>
+   </top>
+   <center>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" promptText="科皓不要" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
